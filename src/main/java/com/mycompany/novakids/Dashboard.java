@@ -73,6 +73,7 @@ private void SetFecha(){
         content.revalidate();
         content.repaint();
   }
+  
 
 /**
      * This method is called from within the constructor to initialize the form.
@@ -120,7 +121,7 @@ private void SetFecha(){
         Principal.setText(" Principal");
         Principal.setBorder(null);
         Principal.setBorderPainted(false);
-        Principal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Principal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Principal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Principal.setMaximumSize(new java.awt.Dimension(573, 512));
         Principal.setPreferredSize(new java.awt.Dimension(57, 16));
@@ -141,6 +142,7 @@ private void SetFecha(){
         jButton4.setBorderPainted(false);
         jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton4.setPreferredSize(new java.awt.Dimension(64, 18));
+        jButton4.addActionListener(this::jButton4ActionPerformed);
 
         jButton2.setBackground(new java.awt.Color(204, 255, 51));
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -295,6 +297,10 @@ private void SetFecha(){
     private void PrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrincipalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PrincipalActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+         showJPanel(new MantenVentas());
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
