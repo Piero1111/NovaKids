@@ -7,12 +7,15 @@ package com.mycompany.novakids;
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.UIManager;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+import com.mycompany.views.MantenVentas;
+import com.mycompany.views.Mantenimiento;
 import com.mycompany.views.Principal;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import javax.swing.JPanel;
 
 /**
  *
@@ -57,15 +60,18 @@ private void SetFecha(){
     ));
 }
   private void InitContent(){
-        Principal pl = new Principal();
-        pl.setSize(750, 430);
-        pl.setLocation(0,0);
+        showJPanel(new Principal());
+       
+        
+  }
+  private void showJPanel(JPanel p){
+       p.setSize(750, 430);
+       p.setLocation(0,0);
         
         content.removeAll();
-        content.add(pl, BorderLayout. CENTER);
+        content.add(p, BorderLayout. CENTER);
         content.revalidate();
         content.repaint();
-        
   }
 
 /**
@@ -94,6 +100,7 @@ private void SetFecha(){
         bienvenido = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1090, 640));
 
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setForeground(new java.awt.Color(153, 255, 153));
@@ -109,11 +116,15 @@ private void SetFecha(){
 
         Principal.setBackground(new java.awt.Color(204, 255, 51));
         Principal.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        Principal.setText("Principal");
-        Principal.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        Principal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hogar (1).png"))); // NOI18N
+        Principal.setText(" Principal");
+        Principal.setBorder(null);
         Principal.setBorderPainted(false);
         Principal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Principal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        Principal.setMaximumSize(new java.awt.Dimension(573, 512));
+        Principal.setPreferredSize(new java.awt.Dimension(57, 16));
+        Principal.addActionListener(this::PrincipalActionPerformed);
 
         jButton1.setBackground(new java.awt.Color(204, 255, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -137,7 +148,6 @@ private void SetFecha(){
         jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         jButton2.setBorderPainted(false);
         jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton2.setPreferredSize(new java.awt.Dimension(64, 18));
 
         jButton5.setBackground(new java.awt.Color(204, 255, 51));
         jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -209,7 +219,7 @@ private void SetFecha(){
                 .addComponent(AdCoJu)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FechaText)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         content.setBackground(new java.awt.Color(255, 255, 255));
@@ -222,7 +232,7 @@ private void SetFecha(){
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+            .addGap(0, 434, Short.MAX_VALUE)
         );
 
         mensaje.setFont(new java.awt.Font("Segoe Script", 1, 12)); // NOI18N
@@ -239,23 +249,26 @@ private void SetFecha(){
                 .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
-                    .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
                         .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
+            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addComponent(bienvenido)
                 .addGap(6, 6, 6)
                 .addComponent(mensaje)
                 .addGap(17, 17, 17)
-                .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
                 .addGap(0, 0, 0)
                 .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
@@ -271,13 +284,17 @@ private void SetFecha(){
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 618, Short.MAX_VALUE)
+                .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrincipalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PrincipalActionPerformed
 
     /**
      * @param args the command line arguments
