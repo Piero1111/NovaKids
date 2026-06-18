@@ -7,9 +7,12 @@ package com.mycompany.novakids;
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.UIManager;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+import com.mycompany.views.Inicio;
 import com.mycompany.views.MantenVentas;
 import com.mycompany.views.Mantenimiento;
+import com.mycompany.views.MantenProductos;
 import com.mycompany.views.Principal;
+import com.mycompany.views.usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.time.LocalDate;
@@ -60,20 +63,30 @@ private void SetFecha(){
     ));
 }
   private void InitContent(){
-        showJPanel(new Principal());
+        showJPanel(new Inicio());
        
         
-  }
-  private void showJPanel(JPanel p){
-       p.setSize(750, 430);
-       p.setLocation(0,0);
+  //}
+ // private void showJPanel(JPanel p){
+       //p.setSize(750, 430);
+       //p.setLocation(0,0);
         
-        content.removeAll();
-        content.add(p, BorderLayout. CENTER);
-        content.revalidate();
-        content.repaint();
+        //content.removeAll();
+        //content.add(p, BorderLayout. CENTER);
+       // content.revalidate();
+        //content.repaint();
   }
-  
+ private void showJPanel(JPanel p) {
+    content.removeAll();
+    content.setLayout(new BorderLayout());
+
+    content.add(p, BorderLayout.CENTER);
+
+    content.revalidate();
+    content.repaint();
+
+}
+
 
 /**
      * This method is called from within the constructor to initialize the form.
@@ -89,10 +102,10 @@ private void SetFecha(){
         appName = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         Principal = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        mantenimiento = new javax.swing.JButton();
+        procesos = new javax.swing.JButton();
+        usuarios = new javax.swing.JButton();
+        reportes = new javax.swing.JButton();
         header = new javax.swing.JPanel();
         AdCoJu = new javax.swing.JLabel();
         FechaText = new javax.swing.JLabel();
@@ -127,37 +140,40 @@ private void SetFecha(){
         Principal.setPreferredSize(new java.awt.Dimension(57, 16));
         Principal.addActionListener(this::PrincipalActionPerformed);
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jButton1.setText("Mantenimiento");
-        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton1.setBorderPainted(false);
-        jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton1.setPreferredSize(new java.awt.Dimension(64, 18));
+        mantenimiento.setBackground(new java.awt.Color(204, 255, 51));
+        mantenimiento.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        mantenimiento.setText("Mantenimiento");
+        mantenimiento.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        mantenimiento.setBorderPainted(false);
+        mantenimiento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        mantenimiento.setPreferredSize(new java.awt.Dimension(64, 18));
+        mantenimiento.addActionListener(this::mantenimientoActionPerformed);
 
-        jButton4.setBackground(new java.awt.Color(204, 255, 51));
-        jButton4.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jButton4.setText("Procesos ");
-        jButton4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton4.setBorderPainted(false);
-        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton4.setPreferredSize(new java.awt.Dimension(64, 18));
-        jButton4.addActionListener(this::jButton4ActionPerformed);
+        procesos.setBackground(new java.awt.Color(204, 255, 51));
+        procesos.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        procesos.setText("Procesos ");
+        procesos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        procesos.setBorderPainted(false);
+        procesos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        procesos.setPreferredSize(new java.awt.Dimension(64, 18));
+        procesos.addActionListener(this::procesosActionPerformed);
 
-        jButton2.setBackground(new java.awt.Color(204, 255, 51));
-        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jButton2.setText("Usuarios\n");
-        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton2.setBorderPainted(false);
-        jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        usuarios.setBackground(new java.awt.Color(204, 255, 51));
+        usuarios.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        usuarios.setText("Usuarios\n");
+        usuarios.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        usuarios.setBorderPainted(false);
+        usuarios.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        usuarios.addActionListener(this::usuariosActionPerformed);
 
-        jButton5.setBackground(new java.awt.Color(204, 255, 51));
-        jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jButton5.setText("Reportes");
-        jButton5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        jButton5.setBorderPainted(false);
-        jButton5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton5.setPreferredSize(new java.awt.Dimension(64, 18));
+        reportes.setBackground(new java.awt.Color(204, 255, 51));
+        reportes.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        reportes.setText("Reportes");
+        reportes.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        reportes.setBorderPainted(false);
+        reportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        reportes.setPreferredSize(new java.awt.Dimension(64, 18));
+        reportes.addActionListener(this::reportesActionPerformed);
 
         javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
         menu.setLayout(menuLayout);
@@ -170,10 +186,10 @@ private void SetFecha(){
                 .addGap(14, 14, 14)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(mantenimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(procesos, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(reportes, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         menuLayout.setVerticalGroup(
             menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,13 +201,13 @@ private void SetFecha(){
                 .addGap(18, 18, 18)
                 .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mantenimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(procesos, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(reportes, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -217,11 +233,11 @@ private void SetFecha(){
         headerLayout.setVerticalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(headerLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(18, 18, 18)
                 .addComponent(AdCoJu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(FechaText)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         content.setBackground(new java.awt.Color(255, 255, 255));
@@ -241,7 +257,7 @@ private void SetFecha(){
         mensaje.setText("Donde cada juego se convierte en una aventura");
 
         bienvenido.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        bienvenido.setText("Bienvenido a NovaKids");
+        bienvenido.setText("NovaKids");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
@@ -295,12 +311,24 @@ private void SetFecha(){
     }// </editor-fold>//GEN-END:initComponents
 
     private void PrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrincipalActionPerformed
-        // TODO add your handling code here:
+         showJPanel(new Principal());
     }//GEN-LAST:event_PrincipalActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-         showJPanel(new MantenVentas());
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void procesosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procesosActionPerformed
+        showJPanel(new MantenVentas());
+    }//GEN-LAST:event_procesosActionPerformed
+
+    private void mantenimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mantenimientoActionPerformed
+        showJPanel(new Mantenimiento());
+    }//GEN-LAST:event_mantenimientoActionPerformed
+
+    private void reportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportesActionPerformed
+        showJPanel(new MantenProductos());
+    }//GEN-LAST:event_reportesActionPerformed
+
+    private void usuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosActionPerformed
+        showJPanel(new usuario());
+    }//GEN-LAST:event_usuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,12 +367,12 @@ private void SetFecha(){
     private javax.swing.JLabel bienvenido;
     private javax.swing.JPanel content;
     private javax.swing.JPanel header;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton mantenimiento;
     private javax.swing.JLabel mensaje;
     private javax.swing.JPanel menu;
+    private javax.swing.JButton procesos;
+    private javax.swing.JButton reportes;
+    private javax.swing.JButton usuarios;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,6 +1,7 @@
 com\mycompany\views\Mantenimiento.class
 com\mycompany\views\MantenVentas.class
 com\mycompany\views\Principal.class
-com\mycompany\views\Lendings.class
+com\mycompany\views\usuario.class
 com\mycompany\views\MantenProductos.class
 com\mycompany\novakids\Dashboard.class
+com\mycompany\views\Inicio.class
