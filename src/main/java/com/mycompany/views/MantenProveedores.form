@@ -54,7 +54,7 @@
               <Component id="jTabbedPane2" alignment="0" pref="820" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
-                  <Component id="jLabel56" min="-2" pref="252" max="-2" attributes="0"/>
+                  <Component id="jLabel56" min="-2" pref="299" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
@@ -84,8 +84,8 @@
             <Container class="javax.swing.JPanel" name="jPanel9">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Lista de Productos">
-                    <Property name="tabTitle" type="java.lang.String" value="Lista de Productos"/>
+                  <JTabbedPaneConstraints tabName="Lista de Proveedores">
+                    <Property name="tabTitle" type="java.lang.String" value="Lista de Proveedores"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -120,9 +120,9 @@
                           <Table columnCount="5" rowCount="4">
                             <Column editable="true" title="ID" type="java.lang.Object"/>
                             <Column editable="true" title="Nombre" type="java.lang.Object"/>
-                            <Column editable="true" title="Categoria" type="java.lang.Object"/>
-                            <Column editable="true" title="Precio" type="java.lang.Object"/>
-                            <Column editable="true" title="Stock" type="java.lang.Object"/>
+                            <Column editable="true" title="Tel&#xe9;fono" type="java.lang.Object"/>
+                            <Column editable="true" title="Correo" type="java.lang.Object"/>
+                            <Column editable="true" title="Direcci&#xf3;n" type="java.lang.Object"/>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -182,11 +182,6 @@
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
-                                  <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                   <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -202,14 +197,18 @@
                                       <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel37" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField20" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField21" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField22" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField23" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField24" alignment="0" pref="211" max="32767" attributes="0"/>
-                                  </Group>
+                              </Group>
+                              <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jTextField20" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextField21" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextField22" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextField23" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextField24" alignment="0" pref="211" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
@@ -276,7 +275,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="18" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Ingrese el ID del producto a consultar:"/>
+                    <Property name="text" type="java.lang.String" value="Ingrese el ID del Proveedor a consultar:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField19">
@@ -301,7 +300,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="18" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Datos del producto"/>
+                    <Property name="text" type="java.lang.String" value="Datos del Proveedor"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel33">
@@ -316,17 +315,17 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel35">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Categoria"/>
+                    <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel36">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Precio"/>
+                    <Property name="text" type="java.lang.String" value="Correo"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel37">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Stock"/>
+                    <Property name="text" type="java.lang.String" value="Direcci&#xf3;n"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField20">
@@ -474,7 +473,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="18" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Ingrese el ID del Producto a modificar:"/>
+                        <Property name="text" type="java.lang.String" value="Ingrese el ID del Proveedor a modificar:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField25">
@@ -499,7 +498,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="18" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Datos del Producto"/>
+                        <Property name="text" type="java.lang.String" value="Datos del Proveedor"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel42">
@@ -514,17 +513,17 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel44">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Categoria"/>
+                        <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel45">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Precio"/>
+                        <Property name="text" type="java.lang.String" value="Correo"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel46">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Stock"/>
+                        <Property name="text" type="java.lang.String" value="Direcci&#xf3;n"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField26">
@@ -601,16 +600,23 @@
                                       <Component id="jLabel50" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="55" pref="55" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel54" min="-2" pref="66" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel53" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="55" pref="55" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel52" min="-2" pref="44" max="-2" attributes="0"/>
-                                                  <Component id="jLabel51" min="-2" pref="26" max="-2" attributes="0"/>
+                                                  <Component id="jLabel54" min="-2" pref="66" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                      <Component id="jLabel53" min="-2" pref="44" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="jLabel52" min="-2" pref="44" max="-2" attributes="0"/>
+                                                          <Component id="jLabel51" min="-2" pref="26" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
                                               </Group>
-                                              <Component id="jLabel55" alignment="1" min="-2" pref="42" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                              <Component id="jLabel55" min="-2" pref="64" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
@@ -621,12 +627,11 @@
                                           <Component id="jTextField32" alignment="1" max="32767" attributes="0"/>
                                           <Component id="jTextField35" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="73" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="jButton2" min="-2" pref="115" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -640,33 +645,32 @@
                                           <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel50" alignment="3" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jTextField31" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jTextField31" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                              <Component id="jLabel49" min="-2" pref="96" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                              <Component id="jButton2" min="-2" pref="49" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                                      <Component id="jLabel49" min="-2" pref="96" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                              <Component id="jButton2" min="-2" pref="49" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel51" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                                  <Component id="jTextField32" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel52" alignment="3" max="32767" attributes="0"/>
-                                                  <Component id="jTextField33" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel51" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <Component id="jTextField32" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel52" alignment="3" max="32767" attributes="0"/>
+                                          <Component id="jTextField33" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -697,7 +701,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="18" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Ingrese el ID del producto a eliminar:"/>
+                        <Property name="text" type="java.lang.String" value="Ingrese el ID del Proveedor a eliminar:"/>
                       </Properties>
                       <AccessibilityProperties>
                         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Ingrese el ID a eliminar:"/>
@@ -725,7 +729,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="18" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Datos del Producto"/>
+                        <Property name="text" type="java.lang.String" value="Datos del Proveedor"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel51">
@@ -740,17 +744,17 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel53">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Precio"/>
+                        <Property name="text" type="java.lang.String" value="Correo"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel54">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Categoria"/>
+                        <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel55">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Stock"/>
+                        <Property name="text" type="java.lang.String" value="Direcci&#xf3;n"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField32">
@@ -875,7 +879,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="18" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Ingrese los Datos del nuevo Producto"/>
+                    <Property name="text" type="java.lang.String" value="Ingrese los Datos del nuevo Proveedor"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel58">
@@ -897,21 +901,21 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel60">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Categoria"/>
+                    <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField39">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel61">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Precio"/>
+                    <Property name="text" type="java.lang.String" value="Correo"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField40">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel62">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Stock"/>
+                    <Property name="text" type="java.lang.String" value="Direcci&#xf3;n"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField41">
@@ -933,7 +937,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="36" style="3"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="PRODUCTOS"/>
+            <Property name="text" type="java.lang.String" value="PROVEEDORES"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">

@@ -11,12 +11,12 @@ import javax.swing.JPanel;
  *
  * @author herma
  */
-public class MantenProductos extends javax.swing.JPanel {
+public class MantenCliente extends javax.swing.JPanel {
 
     /**
      * Creates new form Principal
      */
-    public MantenProductos() {
+    public MantenCliente() {
         initComponents();
     }
 
@@ -127,7 +127,7 @@ public class MantenProductos extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Categoria", "Precio", "Stock"
+                "ID", "Nombre", "Apellido", "Teléfono", "Correo"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -148,12 +148,12 @@ public class MantenProductos extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Lista de Productos", jPanel9);
+        jTabbedPane2.addTab("Lista de Clientes", jPanel9);
 
         jPanel10.setName(""); // NOI18N
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel29.setText("Ingrese el ID del producto a consultar:");
+        jLabel29.setText("Ingrese el ID del Cliente a consultar:");
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel30.setText("ID:");
@@ -161,17 +161,17 @@ public class MantenProductos extends javax.swing.JPanel {
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lupa.png"))); // NOI18N
 
         jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel32.setText("Datos del producto");
+        jLabel32.setText("Datos del Cliente");
 
         jLabel33.setText("ID:");
 
         jLabel34.setText("Nombre");
 
-        jLabel35.setText("Categoria");
+        jLabel35.setText("Apellido");
 
-        jLabel36.setText("Precio");
+        jLabel36.setText("Teléfono");
 
-        jLabel37.setText("Stock");
+        jLabel37.setText("Correo");
 
         jTextField20.addActionListener(this::jTextField20ActionPerformed);
 
@@ -254,7 +254,7 @@ public class MantenProductos extends javax.swing.JPanel {
         jPanel12.setName(""); // NOI18N
 
         jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel38.setText("Ingrese el ID del Producto a modificar:");
+        jLabel38.setText("Ingrese el ID del Cliente a modificar:");
 
         jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel39.setText("ID:");
@@ -262,17 +262,17 @@ public class MantenProductos extends javax.swing.JPanel {
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lupa.png"))); // NOI18N
 
         jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel41.setText("Datos del Producto");
+        jLabel41.setText("Datos del Cliente");
 
         jLabel42.setText("ID:");
 
         jLabel43.setText("Nombre");
 
-        jLabel44.setText("Categoria");
+        jLabel44.setText("Apellido");
 
-        jLabel45.setText("Precio");
+        jLabel45.setText("Teléfono");
 
-        jLabel46.setText("Stock");
+        jLabel46.setText("Correo");
 
         jTextField26.addActionListener(this::jTextField26ActionPerformed);
 
@@ -368,7 +368,7 @@ public class MantenProductos extends javax.swing.JPanel {
         jPanel14.setName(""); // NOI18N
 
         jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel47.setText("Ingrese el ID del producto a eliminar:");
+        jLabel47.setText("Ingrese el ID del Cliente a eliminar:");
 
         jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel48.setText("ID:");
@@ -376,17 +376,17 @@ public class MantenProductos extends javax.swing.JPanel {
         jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lupa.png"))); // NOI18N
 
         jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel50.setText("Datos del Producto");
+        jLabel50.setText("Datos del Ciente");
 
         jLabel51.setText("ID:");
 
         jLabel52.setText("Nombre");
 
-        jLabel53.setText("Precio");
+        jLabel53.setText("Teléfono");
 
-        jLabel54.setText("Categoria");
+        jLabel54.setText("Apellido");
 
-        jLabel55.setText("Stock");
+        jLabel55.setText("Correo");
 
         jTextField32.addActionListener(this::jTextField32ActionPerformed);
 
@@ -411,25 +411,30 @@ public class MantenProductos extends javax.swing.JPanel {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGap(123, 123, 123)
-                        .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addGap(55, 55, 55)
                                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)))
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField34, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
                             .addComponent(jTextField33)
                             .addComponent(jTextField32, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextField35))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
@@ -501,7 +506,7 @@ public class MantenProductos extends javax.swing.JPanel {
         jTabbedPane2.addTab("Eliminar", jPanel13);
 
         jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel57.setText("Ingrese los Datos del nuevo Producto");
+        jLabel57.setText("Ingrese los Datos del nuevo Cliente");
 
         jLabel58.setText("ID:");
 
@@ -509,11 +514,11 @@ public class MantenProductos extends javax.swing.JPanel {
 
         jLabel59.setText("Nombre");
 
-        jLabel60.setText("Categoria");
+        jLabel60.setText("Apellido");
 
-        jLabel61.setText("Precio");
+        jLabel61.setText("Teléfono");
 
-        jLabel62.setText("Stock");
+        jLabel62.setText("Correo");
 
         jButton3.setText("Agregar");
         jButton3.addActionListener(this::jButton3ActionPerformed);
@@ -585,7 +590,7 @@ public class MantenProductos extends javax.swing.JPanel {
         jTabbedPane2.addTab("Agregar", jPanel15);
 
         jLabel56.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
-        jLabel56.setText("PRODUCTOS");
+        jLabel56.setText("CLIENTES");
 
         jButton1.setText("Volver");
         jButton1.addActionListener(this::jButton1ActionPerformed);
@@ -613,6 +618,8 @@ public class MantenProductos extends javax.swing.JPanel {
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(2, Short.MAX_VALUE))
         );
+
+        jTabbedPane2.getAccessibleContext().setAccessibleName("Lista de Clientes\n");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

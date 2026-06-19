@@ -11,12 +11,12 @@ import javax.swing.JPanel;
  *
  * @author herma
  */
-public class MantenProductos extends javax.swing.JPanel {
+public class MantenProveedores extends javax.swing.JPanel {
 
     /**
      * Creates new form Principal
      */
-    public MantenProductos() {
+    public MantenProveedores() {
         initComponents();
     }
 
@@ -127,7 +127,7 @@ public class MantenProductos extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Categoria", "Precio", "Stock"
+                "ID", "Nombre", "Teléfono", "Correo", "Dirección"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -148,12 +148,12 @@ public class MantenProductos extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Lista de Productos", jPanel9);
+        jTabbedPane2.addTab("Lista de Proveedores", jPanel9);
 
         jPanel10.setName(""); // NOI18N
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel29.setText("Ingrese el ID del producto a consultar:");
+        jLabel29.setText("Ingrese el ID del Proveedor a consultar:");
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel30.setText("ID:");
@@ -161,17 +161,17 @@ public class MantenProductos extends javax.swing.JPanel {
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lupa.png"))); // NOI18N
 
         jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel32.setText("Datos del producto");
+        jLabel32.setText("Datos del Proveedor");
 
         jLabel33.setText("ID:");
 
         jLabel34.setText("Nombre");
 
-        jLabel35.setText("Categoria");
+        jLabel35.setText("Teléfono");
 
-        jLabel36.setText("Precio");
+        jLabel36.setText("Correo");
 
-        jLabel37.setText("Stock");
+        jLabel37.setText("Dirección");
 
         jTextField20.addActionListener(this::jTextField20ActionPerformed);
 
@@ -182,10 +182,6 @@ public class MantenProductos extends javax.swing.JPanel {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jLabel29)
-                        .addGap(231, 231, 231)
-                        .addComponent(jLabel32))
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addComponent(jLabel30)
@@ -199,14 +195,17 @@ public class MantenProductos extends javax.swing.JPanel {
                             .addComponent(jLabel34)
                             .addComponent(jLabel35)
                             .addComponent(jLabel36)
-                            .addComponent(jLabel37))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField20)
-                            .addComponent(jTextField21)
-                            .addComponent(jTextField22)
-                            .addComponent(jTextField23)
-                            .addComponent(jTextField24, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))))
+                            .addComponent(jLabel37)))
+                    .addComponent(jLabel29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel32)
+                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField20)
+                        .addComponent(jTextField21)
+                        .addComponent(jTextField22)
+                        .addComponent(jTextField23)
+                        .addComponent(jTextField24, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)))
                 .addGap(195, 195, 195))
         );
         jPanel10Layout.setVerticalGroup(
@@ -254,7 +253,7 @@ public class MantenProductos extends javax.swing.JPanel {
         jPanel12.setName(""); // NOI18N
 
         jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel38.setText("Ingrese el ID del Producto a modificar:");
+        jLabel38.setText("Ingrese el ID del Proveedor a modificar:");
 
         jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel39.setText("ID:");
@@ -262,17 +261,17 @@ public class MantenProductos extends javax.swing.JPanel {
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lupa.png"))); // NOI18N
 
         jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel41.setText("Datos del Producto");
+        jLabel41.setText("Datos del Proveedor");
 
         jLabel42.setText("ID:");
 
         jLabel43.setText("Nombre");
 
-        jLabel44.setText("Categoria");
+        jLabel44.setText("Teléfono");
 
-        jLabel45.setText("Precio");
+        jLabel45.setText("Correo");
 
-        jLabel46.setText("Stock");
+        jLabel46.setText("Dirección");
 
         jTextField26.addActionListener(this::jTextField26ActionPerformed);
 
@@ -368,7 +367,7 @@ public class MantenProductos extends javax.swing.JPanel {
         jPanel14.setName(""); // NOI18N
 
         jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel47.setText("Ingrese el ID del producto a eliminar:");
+        jLabel47.setText("Ingrese el ID del Proveedor a eliminar:");
 
         jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel48.setText("ID:");
@@ -376,17 +375,17 @@ public class MantenProductos extends javax.swing.JPanel {
         jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lupa.png"))); // NOI18N
 
         jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel50.setText("Datos del Producto");
+        jLabel50.setText("Datos del Proveedor");
 
         jLabel51.setText("ID:");
 
         jLabel52.setText("Nombre");
 
-        jLabel53.setText("Precio");
+        jLabel53.setText("Correo");
 
-        jLabel54.setText("Categoria");
+        jLabel54.setText("Teléfono");
 
-        jLabel55.setText("Stock");
+        jLabel55.setText("Dirección");
 
         jTextField32.addActionListener(this::jTextField32ActionPerformed);
 
@@ -413,26 +412,29 @@ public class MantenProductos extends javax.swing.JPanel {
                         .addGap(123, 123, 123)
                         .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addGap(55, 55, 55)
                                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                                .addGap(57, 57, 57)
+                                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField34, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
                             .addComponent(jTextField33)
                             .addComponent(jTextField32, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField35))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTextField35))))
+                .addGap(20, 20, 20)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addGap(30, 30, 30))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -443,27 +445,26 @@ public class MantenProductos extends javax.swing.JPanel {
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel47)
                             .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(35, 35, 35)
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel48))
-                        .addGap(58, 58, 58)
-                        .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel14Layout.createSequentialGroup()
-                                .addGap(53, 53, 53)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                                .addGap(78, 78, 78)
+                                .addGap(35, 35, 35)
                                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel52, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel48))
+                                .addGap(58, 58, 58)
+                                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel52, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -501,7 +502,7 @@ public class MantenProductos extends javax.swing.JPanel {
         jTabbedPane2.addTab("Eliminar", jPanel13);
 
         jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel57.setText("Ingrese los Datos del nuevo Producto");
+        jLabel57.setText("Ingrese los Datos del nuevo Proveedor");
 
         jLabel58.setText("ID:");
 
@@ -509,11 +510,11 @@ public class MantenProductos extends javax.swing.JPanel {
 
         jLabel59.setText("Nombre");
 
-        jLabel60.setText("Categoria");
+        jLabel60.setText("Teléfono");
 
-        jLabel61.setText("Precio");
+        jLabel61.setText("Correo");
 
-        jLabel62.setText("Stock");
+        jLabel62.setText("Dirección");
 
         jButton3.setText("Agregar");
         jButton3.addActionListener(this::jButton3ActionPerformed);
@@ -585,7 +586,7 @@ public class MantenProductos extends javax.swing.JPanel {
         jTabbedPane2.addTab("Agregar", jPanel15);
 
         jLabel56.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
-        jLabel56.setText("PRODUCTOS");
+        jLabel56.setText("PROVEEDORES");
 
         jButton1.setText("Volver");
         jButton1.addActionListener(this::jButton1ActionPerformed);
@@ -597,7 +598,7 @@ public class MantenProductos extends javax.swing.JPanel {
             .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 820, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(212, 212, 212)
-                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(91, 91, 91))

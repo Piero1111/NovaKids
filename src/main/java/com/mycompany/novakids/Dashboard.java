@@ -12,6 +12,7 @@ import com.mycompany.views.MantenVentas;
 import com.mycompany.views.Mantenimiento;
 import com.mycompany.views.MantenProductos;
 import com.mycompany.views.Principal;
+import com.mycompany.views.Procesos;
 import com.mycompany.views.usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -76,7 +77,7 @@ private void SetFecha(){
        // content.revalidate();
         //content.repaint();
   }
- private void showJPanel(JPanel p) {
+ public void showJPanel(JPanel p) {
     content.removeAll();
     content.setLayout(new BorderLayout());
 
@@ -241,6 +242,7 @@ private void SetFecha(){
         );
 
         content.setBackground(new java.awt.Color(255, 255, 255));
+        content.setMinimumSize(new java.awt.Dimension(820, 434));
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
@@ -268,14 +270,11 @@ private void SetFecha(){
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
                     .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
                         .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(backgroundLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,7 +287,7 @@ private void SetFecha(){
                 .addGap(17, 17, 17)
                 .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
                 .addGap(0, 0, 0)
-                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(17, 17, 17))
         );
 
@@ -315,7 +314,7 @@ private void SetFecha(){
     }//GEN-LAST:event_PrincipalActionPerformed
 
     private void procesosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procesosActionPerformed
-        showJPanel(new MantenVentas());
+        showJPanel(new Procesos());
     }//GEN-LAST:event_procesosActionPerformed
 
     private void mantenimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mantenimientoActionPerformed
@@ -323,7 +322,7 @@ private void SetFecha(){
     }//GEN-LAST:event_mantenimientoActionPerformed
 
     private void reportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportesActionPerformed
-        showJPanel(new MantenProductos());
+        
     }//GEN-LAST:event_reportesActionPerformed
 
     private void usuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosActionPerformed
