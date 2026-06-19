@@ -13,7 +13,9 @@ import com.mycompany.views.Mantenimiento;
 import com.mycompany.views.MantenProductos;
 import com.mycompany.views.Principal;
 import com.mycompany.views.Procesos;
-import com.mycompany.views.usuario;
+import com.mycompany.views.Reportes;
+import com.mycompany.views.Usuarios;
+import com.mycompany.views.Login;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.time.LocalDate;
@@ -322,11 +324,11 @@ private void SetFecha(){
     }//GEN-LAST:event_mantenimientoActionPerformed
 
     private void reportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportesActionPerformed
-        
+        showJPanel(new Reportes());
     }//GEN-LAST:event_reportesActionPerformed
 
     private void usuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosActionPerformed
-        showJPanel(new usuario());
+        showJPanel(new Usuarios());
     }//GEN-LAST:event_usuariosActionPerformed
 
     /**
